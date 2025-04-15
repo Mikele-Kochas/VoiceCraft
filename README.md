@@ -2,11 +2,10 @@
 
 VoiceCraft to interaktywna aplikacja webowa umożliwiająca generowanie symulowanych podcastów z wykorzystaniem sztucznej inteligencji. Aplikacja pozwala na tworzenie rozmów między wirtualnymi postaciami o różnych osobowościach na dowolne tematy, a następnie konwertowanie tych rozmów na formę audio.
 
-![VoiceCraft Screenshot](public/screenshot.png)
 
 ## Funkcjonalności
 
-- **Generowanie konwersacji AI**: Tworzenie realistycznych rozmów między dwoma wirtualnymi postaciami
+- **Generowanie konwersacji AI**: Tworzenie (w miarę) realistycznych rozmów między dwoma wirtualnymi postaciami
 - **Wybór osobowości rozmówców**: 6 predefiniowanych, unikalnych osobowości do wyboru
 - **Konwersja tekstu na mowę**: Synteza mowy z wykorzystaniem modeli TTS (Text-to-Speech)
 - **Interaktywny interfejs**: Prosty w obsłudze interfejs do generowania i przeglądania konwersacji
@@ -86,6 +85,6 @@ npm run build
 
 Ten projekt jest udostępniony na licencji MIT.
 
-## Autor
+## Autorzy
 
-Michał Kocher
+Michał Kocher, Martyna Kłak
