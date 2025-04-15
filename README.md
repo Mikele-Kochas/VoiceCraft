@@ -1,46 +1,91 @@
-# Getting Started with Create React App
+# VoiceCraft: Generator Podcastów AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+VoiceCraft to interaktywna aplikacja webowa umożliwiająca generowanie symulowanych podcastów z wykorzystaniem sztucznej inteligencji. Aplikacja pozwala na tworzenie rozmów między wirtualnymi postaciami o różnych osobowościach na dowolne tematy, a następnie konwertowanie tych rozmów na formę audio.
 
-## Available Scripts
+![VoiceCraft Screenshot](public/screenshot.png)
 
-In the project directory, you can run:
+## Funkcjonalności
 
-### `npm start`
+- **Generowanie konwersacji AI**: Tworzenie realistycznych rozmów między dwoma wirtualnymi postaciami
+- **Wybór osobowości rozmówców**: 6 predefiniowanych, unikalnych osobowości do wyboru
+- **Konwersja tekstu na mowę**: Synteza mowy z wykorzystaniem modeli TTS (Text-to-Speech)
+- **Interaktywny interfejs**: Prosty w obsłudze interfejs do generowania i przeglądania konwersacji
+- **Eksport audio**: Możliwość zapisania wygenerowanego podcastu jako plik MP3
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologie
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Frontend**: React, TypeScript, CSS
+- **Zarządzanie stanem**: React Context API
+- **API zewnętrzne**:
+  - OpenAI API - generowanie tekstu (GPT-4o-mini)
+  - OpenAI API - synteza mowy (TTS-1)
+- **Biblioteki pomocnicze**:
+  - openai - klient API OpenAI
+  - file-saver - zapisywanie plików audio
 
-### `npm test`
+## Instalacja
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Klonuj to repozytorium:
+```bash
+git clone https://github.com/Mikele-Kochas/VoiceCraft.git
+cd VoiceCraft
+```
 
-### `npm run build`
+2. Zainstaluj zależności:
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Utwórz plik `.env` w głównym katalogu projektu i dodaj swój klucz API OpenAI:
+```
+REACT_APP_OPENAI_API_KEY=twój_klucz_api_openai
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Uruchomienie
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Aby uruchomić aplikację w trybie deweloperskim:
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Otwórz [http://localhost:3000](http://localhost:3000) w przeglądarce, aby zobaczyć aplikację.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Aby zbudować wersję produkcyjną:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Instrukcja użycia
 
-## Learn More
+1. **Wprowadź temat podcastu**: Wpisz dowolny temat w pole tekstowe
+2. **Wybierz rozmówców**: Wybierz dwóch różnych agentów AI z dostępnych osobowości:
+   - Ola - 8-letnie dziecko, dociekliwe i zaangażowane
+   - Kazimierz - 45-letni naukowiec, ekscentryczny i chaotyczny
+   - Kasia - 25-letnia prowadząca, charyzmatyczna i błyskotliwa
+   - Janinka - 65-letnia seniorka, strażniczka tradycji
+   - Albert - geek z obsesją na punkcie popkultury
+   - Krystian - charyzmatyczny prowadzący z ciętą ripostą
+3. **Generuj rozmowę**: Kliknij przycisk "Generuj", aby stworzyć konwersację
+4. **Przeglądaj wyniki**: Przeczytaj wygenerowaną transkrypcję podcastu
+5. **Generuj audio**: Kliknij przycisk "Generuj Audio", aby przekształcić tekst w plik audio
+6. **Słuchaj lub pobierz**: Odsłuchaj wygenerowany podcast lub pobierz go jako plik MP3
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Uwagi dotyczące bezpieczeństwa
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Klucz API**: Nigdy nie udostępniaj swojego klucza API OpenAI w publicznym repozytorium
+- **Koszty API**: Pamiętaj, że korzystanie z API OpenAI (szczególnie TTS) wiąże się z kosztami
+
+## Ograniczenia
+
+- Aplikacja działa całkowicie po stronie przeglądarki (frontend-only), co nie jest zalecane dla rozwiązań produkcyjnych ze względów bezpieczeństwa
+- Funkcja łączenia plików audio jest uproszczona i w pełnej implementacji wymagałaby bardziej zaawansowanych bibliotek (np. ffmpeg.js)
+
+## Licencja
+
+Ten projekt jest udostępniony na licencji MIT.
+
+## Autor
+
+Michał Kocher
